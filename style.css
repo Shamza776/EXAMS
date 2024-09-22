@@ -95,7 +95,7 @@ header nav ul li a:hover {
     background-color: #f9f9f9;
     text-align: center;
     gap: 20px;
-    /* text-size-adjust: 3em; */
+    text-size-adjust: 3em;
 }
 
 .container-text {
@@ -821,3 +821,193 @@ h2 {
    
 }
 
+/* responsiveness */
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* For screens smaller than 576px */
+@media (max-width: 575.98px) {
+  /* Header section */
+  header .container.cont {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  header .logo img {
+      width: 120px;
+  }
+
+  header nav ul {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .btns a, .btns button {
+      display: block;
+      margin: 10px 0;
+  }
+
+  /* Banner section */
+  .container.banner {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .container-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .right video {
+        width: 100%;
+    }
+
+    /* Services section */
+    .product-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .serv-ice {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+
+    /* Testimonial section */
+    .testimonials-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+}
+
+/* For screens greater than or equal to 576px */
+@media (min-width: 576px) {
+  header .container.cont {
+    justify-content: space-between;
+}
+
+header .logo img {
+    width: 150px;
+}
+
+header nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+.btns {
+    display: flex;
+    gap: 10px;
+}
+
+.product-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.serv-ice {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+}
+
+/* For screens greater than or equal to 768px */
+@media (min-width: 768px) {
+/* Header */
+header .logo img {
+  width: 180px;
+}
+
+/* Banner section */
+.container.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-text {
+  width: 50%;
+}
+
+.right {
+  width: 50%;
+}
+
+.right video {
+  width: 100%;
+}
+
+/* Services section */
+.product-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.serv-ice {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+}
+/* Testimonial section */
+.testimonials-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* For screens greater than or equal to 992px */
+@media (min-width: 992px) {
+/* Banner */
+.container-text h2 {
+  font-size: 2.5rem;
+}
+
+/* Services section */
+.product-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.serv-ice {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Managers section */
+.managers {
+  display: flex;
+  justify-content: center;
+}
+
+/* Testimonials section */
+.testimonials-container {
+  display: flex;
+}
+/* Footer */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-section {
+  width: 30%;
+}
+}
